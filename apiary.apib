@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+
 
 # "Majestic Thai"
 
@@ -11,40 +11,40 @@ Simple API allowing consumers to view results of the menu and the order.
 
 + Response 200 (application/json)
 
+           {
+        
                [
                     {
                     "Name": "Jollof Rice",
                     "Price": 3000,
-                    "Category": "Rice",
-                    "url": "/menu/1"
+                    "Category": "Rice"
                   },
                   {
                     "Name": "Fried Rice",
                     "Price": 5000,
-                    "Category": "Rice",
-                    "url": "/menu/2"
-
+                    "Category": "Rice"
+                    
                   },
                   {
                     "Name": "Yellow Rice",
                     "Price": 5500,
-                    "Category": "Rice",
-                    "url": "/menu/3"
+                    "Category": "Rice"
 
                   },
                   {
                     "Name": "Rice and Stew",
                     "Price": 4000,
-                    "Category": "Rice",
-                    "url": "/menu/4"
-                  },
+                    "Category": "Rice"
+                  }
                   
                 ]
+           }
+        
 ## Individual Item [/menu/{id}]
 
 + Parameters
 
-    + id (1) - ID of the specific menu as requested
+    + id (number) - ID of the specific menu as requested
     
 ### My Item [GET]
 
@@ -54,8 +54,7 @@ Simple API allowing consumers to view results of the menu and the order.
                     "Name": "Rice and Stew",
                     "Price": 4000,
                     "Category": "Rice"
-                    "url": "/menu/4"
-   
+
                 }
 
 ## Order Collection [/orders]
@@ -64,32 +63,36 @@ Simple API allowing consumers to view results of the menu and the order.
 
 + Response 200 (application/json)
 
-        [
             {
-                "username": "Absolutestunna",
-                "Name": "Jollof Rice",
-                "Price": 4900,
-                "Category": "Chicken"
-            },
-            {
-                "username": "Absolutestunna",
-                "Name": "Jollof Rice",
-                "Price": 4900,
-                "Category": "Chicken"
+    
+                [
+                    {
+                        "username": "Absolutestunna",
+                        "Name": "Jollof Rice",
+                        "Price": 4900,
+                        "Category": "Chicken"
+                    },
+                    {
+                        "username": "Absolutestunna",
+                        "Name": "Jollof Rice",
+                        "Price": 4900,
+                        "Category": "Chicken"
+                    }
+                ]
+    
             }
-        ]
         
 ## Individual Order [/order/{id}]
 
 + Parameters
 
-    + id (1) - ID of the specific menu as requested
+    + id (number) - ID of the specific menu as requested
     
 ### My Order [GET]
 
 + Response 200 (application/json)
 
-              {
+            {
                 "username": "Absolutestunna",
                 "Name": "Jollof Rice",
                 "Price": 4900,
