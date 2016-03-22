@@ -7,7 +7,7 @@ Simple API allowing consumers to view results of the menu and the order.
 
 ## Menu Collection [/menu]
 
-### Menu Items [GET]
+### Menu [GET]
 
 + Response 200 (application/json)
 
@@ -54,11 +54,13 @@ Simple API allowing consumers to view results of the menu and the order.
                     "Name": "Rice and Stew",
                     "Price": 4000,
                     "Category": "Rice"
+                    "url": "/menu/4"
+   
                 }
 
 ## Order Collection [/orders]
 
-### My Orders [GET]
+### Orders [GET]
 
 + Response 200 (application/json)
 
@@ -83,7 +85,7 @@ Simple API allowing consumers to view results of the menu and the order.
 
     + id (1) - ID of the specific menu as requested
     
-### My Item [GET]
+### My Order [GET]
 
 + Response 200 (application/json)
 
